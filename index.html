@@ -153,9 +153,34 @@
         .social-links a:hover { background: #6b1d2f; color: white; }
         
         .map-container { margin-top: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .map-container iframe { width: 100%; height: 300px; border: 0; }
+        .map-container iframe { width: 100%; height: 350px; border: 0; }
         
-        footer { text-align: center; padding: 30px 20px; color: #777; font-size: 0.9em; }
+        /* === TOMBOL WHATSAPP MELAYANG (FLOATING WA) === */
+        .floating-wa {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95em;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 9999;
+            transition: all 0.3s ease;
+        }
+        .floating-wa:hover {
+            background-color: #1eb854;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+        }
+
+        footer { text-align: center; padding: 30px 20px 80px 20px; color: #777; font-size: 0.9em; }
     </style>
 </head>
 <body>
@@ -163,7 +188,7 @@
     <!-- HERO SECTION / BERANDA -->
     <header class="hero">
         <div class="logo-container">
-            <img src="logo.jpg" alt="Logo Paramount Star Computer">
+            <img src="logo.png" alt="Logo Paramount Star Computer">
         </div>
         
         <div class="tag-pill">✨ Solusi Servis Terpercaya di Jatinangor</div>
@@ -219,9 +244,9 @@
             <p><strong>Alamat:</strong> Jalan Puri Indah Jatinangor Blok A3 No. 21, Cikeruh, Kec. Jatinangor, Kab. Sumedang, Jawa Barat 45363</p>
             <p><strong>Jam Buka:</strong> Senin - Sabtu (11.00 - 20.00 WIB)</p>
             
-            <!-- Peta Google Maps Interaktif -->
+            <!-- Peta Google Maps Interaktif (Resmi Terbaru) -->
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.598379412586!2d107.7681342!3d-6.9385311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c3445cd083b7%3A0xb393160eeb3d420c!2sPSC%20Service%20Laptop%20Macbook%20Jatinangor!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.5623161079825!2d107.7744965!3d-6.942794499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c5386d99530f%3A0xb984eade85016a8b!2sPSC%20Service%20Laptop%20Macbook%20Jatinangor!5e0!3m2!1sen!2sid!4v1785297121139!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
         </div>
 
@@ -235,6 +260,11 @@
         </div>
 
     </div>
+
+    <!-- TOMBOL WA MELAYANG -->
+    <a href="https://wa.me/6285188243665" class="floating-wa" target="_blank">
+        💬 Chat WhatsApp
+    </a>
 
     <footer>
         <p>&copy; 2026 Paramount Star Computer (PSC Jatinangor). All Rights Reserved.</p>
