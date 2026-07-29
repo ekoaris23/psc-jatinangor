@@ -5,107 +5,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PSC Service Laptop Macbook Jatinangor</title>
     
-    <!-- FAVICON (Icon untuk Tab Browser) -->
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="favicon.png">
 
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
         body { background-color: #f8f9fa; color: #2b2b2b; line-height: 1.6; }
         
-        /* Header dengan Warna Maroon Logo */
-        header { 
-            background: linear-gradient(135deg, #4a121e 0%, #6b1d2f 100%); 
+        /* === HERO SECTION (BERANDA) === */
+        .hero { 
+            background: linear-gradient(135deg, #380d15 0%, #6b1d2f 60%, #8c283f 100%); 
             color: white; 
             text-align: center; 
-            padding: 40px 20px; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            padding: 55px 20px 60px 20px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: relative;
         }
         
-        /* Menampilkan Logo Baru */
         .logo-container img {
-            max-width: 170px;
+            max-width: 150px;
             height: auto;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             border-radius: 8px;
-            filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3));
+            filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.35));
         }
 
-        header h1 { font-size: 1.9em; margin-bottom: 6px; font-weight: 700; letter-spacing: 0.5px; }
-        header p { font-size: 1.05em; opacity: 0.95; font-weight: 300; }
+        .tag-pill {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffeef1;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 { 
+            font-size: 2.2em; 
+            margin-bottom: 12px; 
+            font-weight: 800; 
+            line-height: 1.25;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p { 
+            font-size: 1.1em; 
+            opacity: 0.92; 
+            font-weight: 300; 
+            max-width: 650px;
+            margin: 0 auto 25px auto;
+        }
+
+        /* Dual Action Buttons */
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .btn-primary-wa {
+            background-color: #25D366;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-primary-wa:hover { background-color: #1eb854; transform: translateY(-2px); }
+
+        .btn-secondary-info {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        .btn-secondary-info:hover { background-color: rgba(255, 255, 255, 0.25); }
+
+        /* Trust Stats Bar */
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 0.85em;
+            opacity: 0.9;
+            flex-wrap: wrap;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .trust-item { display: flex; align-items: center; gap: 6px; }
+
+        /* === CONTAINER & CARDS === */
+        .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
         
-        .container { max-width: 800px; margin: 25px auto; padding: 0 20px; }
-        
-        /* Card Styling */
         .card { 
             background: white; 
-            padding: 25px; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            padding: 28px; 
+            border-radius: 14px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04); 
             margin-bottom: 25px; 
             border-top: 4px solid #6b1d2f;
         }
         
-        h2 { color: #6b1d2f; margin-bottom: 15px; border-bottom: 2px solid #f1f1f1; padding-bottom: 8px; font-size: 1.3em; }
+        h2 { color: #6b1d2f; margin-bottom: 18px; border-bottom: 2px solid #f1f1f1; padding-bottom: 10px; font-size: 1.35em; font-weight: 700; }
         ul { list-style-position: inside; margin-bottom: 15px; }
         li { margin-bottom: 8px; }
         
-        /* Badge Warna Soft Maroon */
+        /* Badges */
         .badge-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
         .badge { 
             background: #fbf0f2; 
             color: #6b1d2f; 
             border: 1px solid #f0d5da;
             padding: 10px 15px; 
-            border-radius: 6px; 
+            border-radius: 8px; 
             font-weight: 600; 
             font-size: 0.9em; 
         }
         
-        /* Tombol WhatsApp */
-        .btn-wa { 
-            display: block; 
-            width: 100%; 
-            text-align: center; 
-            background-color: #25D366; 
-            color: white; 
-            padding: 15px; 
-            text-decoration: none; 
-            font-size: 1.1em; 
-            font-weight: bold; 
-            border-radius: 8px; 
-            margin-top: 20px; 
-            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
-            transition: background 0.2s;
-        }
-        .btn-wa:hover { background-color: #1eb854; }
-        
         .social-links a { 
             display: inline-block; 
-            margin-right: 15px; 
+            margin-right: 12px; 
             color: #6b1d2f; 
             text-decoration: none; 
-            font-weight: bold; 
+            font-weight: 700; 
             background: #fbf0f2;
-            padding: 8px 15px;
-            border-radius: 6px;
+            padding: 10px 18px;
+            border-radius: 8px;
             transition: 0.2s;
         }
         .social-links a:hover { background: #6b1d2f; color: white; }
         
-        .map-container { margin-top: 15px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .map-container { margin-top: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .map-container iframe { width: 100%; height: 300px; border: 0; }
         
-        footer { text-align: center; padding: 25px; color: #777; font-size: 0.9em; }
+        footer { text-align: center; padding: 30px 20px; color: #777; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
-    <header>
+    <!-- HERO SECTION / BERANDA -->
+    <header class="hero">
         <div class="logo-container">
-            <img src="logo.png" alt="Logo Paramount Star Computer">
+            <img src="logo.jpg" alt="Logo Paramount Star Computer">
         </div>
-        <h1>PSC Service Laptop Macbook Jatinangor</h1>
-        <p>Pusat Servis Laptop & MacBook Terpercaya di Jatinangor — Harga Ramah Kantong Mahasiswa</p>
+        
+        <div class="tag-pill">✨ Solusi Servis Terpercaya di Jatinangor</div>
+        
+        <h1>Servis Laptop & MacBook Cepat, Transparan, & Terjangkau</h1>
+        <p>Solusi andalan mahasiswa UNPAD, ITB, IPDN, & IKOPIN. Cek kendala gratis tanpa biaya tersembunyi!</p>
+        
+        <div class="hero-cta">
+            <a href="https://wa.me/6285188243665" class="btn-primary-wa" target="_blank">
+                💬 Konsultasi Gratis (WhatsApp)
+            </a>
+            <a href="#lokasi" class="btn-secondary-info">📍 Lokasi Toko</a>
+        </div>
+
+        <div class="trust-bar">
+            <div class="trust-item">✅ Free Pengecekan</div>
+            <div class="trust-item">✅ Antar-Jemput Gratis</div>
+            <div class="trust-item">✅ Bergaransi Resmi</div>
+        </div>
     </header>
 
     <div class="container">
@@ -116,7 +193,7 @@
             <div class="badge-list">
                 <div class="badge">FREE JASA PENGECEKAN</div>
                 <div class="badge">FREE ANTAR & JEMPUT BARANG</div>
-                <div class="badge">FREE BIAYA ONSITE (Jatinangor, Bandung Timur & Sekitarnya)</div>
+                <div class="badge">FREE BIAYA ONSITE (Jatinangor & Sekitarnya)</div>
                 <div class="badge">FREE KONSULTASI</div>
             </div>
         </div>
@@ -137,7 +214,7 @@
         </div>
 
         <!-- Kontak & Alamat + MAPS -->
-        <div class="card">
+        <div class="card" id="lokasi">
             <h2>📍 Alamat & Jam Operasional</h2>
             <p><strong>Alamat:</strong> Jalan Puri Indah Jatinangor Blok A3 No. 21, Cikeruh, Kec. Jatinangor, Kab. Sumedang, Jawa Barat 45363</p>
             <p><strong>Jam Buka:</strong> Senin - Sabtu (11.00 - 20.00 WIB)</p>
@@ -146,8 +223,6 @@
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.598379412586!2d107.7681342!3d-6.9385311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c3445cd083b7%3A0xb393160eeb3d420c!2sPSC%20Service%20Laptop%20Macbook%20Jatinangor!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-
-            <a href="https://wa.me/6285188243665" class="btn-wa" target="_blank">💬 Hubungi via WhatsApp (0851-8824-3665)</a>
         </div>
 
         <!-- Media Sosial -->
