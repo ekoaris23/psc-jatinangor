@@ -5,31 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PSC Service Laptop Macbook Jatinangor</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-        body { background-color: #f4f6f9; color: #333; line-height: 1.6; }
-        header { background-color: #0056b3; color: white; text-align: center; padding: 40px 20px; }
-        header h1 { font-size: 2em; margin-bottom: 10px; }
-        header p { font-size: 1.1em; opacity: 0.9; }
-        .container { max-width: 800px; margin: 20px auto; padding: 20px; }
-        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        h2 { color: #0056b3; margin-bottom: 15px; border-bottom: 2px solid #0056b3; padding-bottom: 5px; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f8f9fa; color: #2b2b2b; line-height: 1.6; }
+        
+        /* Header dengan Warna Maroon Logo */
+        header { 
+            background: linear-gradient(135deg, #4a121e 0%, #6b1d2f 100%); 
+            color: white; 
+            text-align: center; 
+            padding: 40px 20px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        
+        /* Tempat Logo jika nanti mau di-upload ke GitHub */
+        .logo-container img {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 15px;
+            filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.2));
+        }
+
+        header h1 { font-size: 2em; margin-bottom: 8px; font-weight: 700; letter-spacing: 0.5px; }
+        header p { font-size: 1.1em; opacity: 0.95; font-weight: 300; }
+        
+        .container { max-width: 800px; margin: 25px auto; padding: 0 20px; }
+        
+        /* Card Styling */
+        .card { 
+            background: white; 
+            padding: 25px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            margin-bottom: 25px; 
+            border-top: 4px solid #6b1d2f;
+        }
+        
+        h2 { color: #6b1d2f; margin-bottom: 15px; border-bottom: 2px solid #f1f1f1; padding-bottom: 8px; font-size: 1.3em; }
         ul { list-style-position: inside; margin-bottom: 15px; }
         li { margin-bottom: 8px; }
+        
+        /* Badge Warna Soft Maroon */
         .badge-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
-        .badge { background: #e3f2fd; color: #0d47a1; padding: 10px 15px; border-radius: 5px; font-weight: bold; font-size: 0.9em; }
-        .btn-wa { display: block; width: 100%; text-align: center; background-color: #25D366; color: white; padding: 15px; text-decoration: none; font-size: 1.2em; font-weight: bold; border-radius: 8px; margin-top: 15px; }
+        .badge { 
+            background: #fbf0f2; 
+            color: #6b1d2f; 
+            border: 1px solid #f0d5da;
+            padding: 10px 15px; 
+            border-radius: 6px; 
+            font-weight: 600; 
+            font-size: 0.9em; 
+        }
+        
+        /* Tombol WhatsApp Tetap Hijau Khas WA agar Mudah Dikenali */
+        .btn-wa { 
+            display: block; 
+            width: 100%; 
+            text-align: center; 
+            background-color: #25D366; 
+            color: white; 
+            padding: 15px; 
+            text-decoration: none; 
+            font-size: 1.1em; 
+            font-weight: bold; 
+            border-radius: 8px; 
+            margin-top: 20px; 
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+            transition: background 0.2s;
+        }
         .btn-wa:hover { background-color: #1eb854; }
-        .social-links a { display: inline-block; margin-right: 15px; color: #0056b3; text-decoration: none; font-weight: bold; }
-        .map-container { margin-top: 15px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+        
+        .social-links a { 
+            display: inline-block; 
+            margin-right: 15px; 
+            color: #6b1d2f; 
+            text-decoration: none; 
+            font-weight: bold; 
+            background: #fbf0f2;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+        .social-links a:hover { background: #6b1d2f; color: white; }
+        
+        .map-container { margin-top: 15px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         .map-container iframe { width: 100%; height: 300px; border: 0; }
-        footer { text-align: center; padding: 20px; color: #666; font-size: 0.9em; }
+        
+        footer { text-align: center; padding: 25px; color: #777; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
     <header>
+        <div class="logo-container">
+            <!-- Tempat logo jika nanti diunggah -->
+        </div>
         <h1>PSC Service Laptop Macbook Jatinangor</h1>
-        <p>Pusat Servis Laptop & MacBook Terpercaya di Jatinangor, Solusi Andal Mahasiswa.</p>
+        <p>PARAMOUNT STAR COMPUTER — Laptop, Computer, Macbook, Android & iPhone Repair</p>
     </header>
 
     <div class="container">
@@ -48,7 +119,7 @@
         <!-- Melayani & Layanan -->
         <div class="card">
             <h2>🛠️ Layanan Servis</h2>
-            <p><strong>Melayani Perbaikan:</strong> Laptop Semua Merk | MacBook | Komputer (PC)</p>
+            <p><strong>Melayani Perbaikan:</strong> Laptop Semua Merk | MacBook | Komputer (PC) | Android & iPhone</p>
             <br>
             <ul>
                 <li>Install Ulang Windows & Mac</li>
@@ -68,7 +139,7 @@
             
             <!-- Peta Google Maps Interaktif -->
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.562316166422!2d107.77192157499672!3d-6.942794493057302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c5386d99530f%3A0xb984eade85016a8b!2sPSC%20Service%20Laptop%20Macbook%20Jatinangor!5e0!3m2!1sen!2sid!4v1785253060233!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.598379412586!2d107.7681342!3d-6.9385311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c3445cd083b7%3A0xb393160eeb3d420c!2sPSC%20Service%20Laptop%20Macbook%20Jatinangor!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <a href="https://wa.me/6285188243665" class="btn-wa" target="_blank">💬 Hubungi via WhatsApp (0851-8824-3665)</a>
@@ -86,7 +157,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 PSC Service Laptop Macbook Jatinangor. All Rights Reserved.</p>
+        <p>&copy; 2026 Paramount Star Computer (PSC Jatinangor). All Rights Reserved.</p>
     </footer>
 
 </body>
