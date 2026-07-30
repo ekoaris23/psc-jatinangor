@@ -54,7 +54,7 @@
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 20px;
+            gap: 18px;
             align-items: center;
         }
 
@@ -84,11 +84,8 @@
             border-bottom: none !important;
         }
 
-        .btn-nav-cta:hover {
-            background-color: #380d15 !important;
-        }
+        .btn-nav-cta:hover { background-color: #380d15 !important; }
 
-        /* Hamburger Toggle Button */
         .menu-toggle {
             display: none;
             background: none;
@@ -99,8 +96,7 @@
             padding: 5px;
         }
 
-        /* Responsive Navbar */
-        @media (max-width: 820px) {
+        @media (max-width: 850px) {
             .menu-toggle { display: block; }
             .nav-menu {
                 display: none;
@@ -130,7 +126,7 @@
             }
         }
 
-        /* === HERO SECTION (BERANDA) === */
+        /* === HERO SECTION === */
         .hero { 
             background: linear-gradient(135deg, #380d15 0%, #6b1d2f 60%, #8c283f 100%); 
             color: white; 
@@ -178,7 +174,6 @@
             margin: 0 auto 25px auto;
         }
 
-        /* Dual Action Buttons */
         .hero-cta {
             display: flex;
             justify-content: center;
@@ -217,7 +212,6 @@
         }
         .btn-secondary-info:hover { background-color: rgba(255, 255, 255, 0.25); }
 
-        /* Trust Stats Bar */
         .trust-bar {
             display: flex;
             justify-content: center;
@@ -233,7 +227,7 @@
         .trust-item { display: flex; align-items: center; gap: 6px; }
 
         /* === CONTAINER & CARDS === */
-        .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+        .container { max-width: 850px; margin: 30px auto; padding: 0 20px; }
         
         .card { 
             background: white; 
@@ -248,7 +242,6 @@
         ul { list-style-position: inside; margin-bottom: 15px; }
         li { margin-bottom: 8px; }
         
-        /* Badges */
         .badge-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
         .badge { 
             background: #fbf0f2; 
@@ -262,7 +255,68 @@
             align-items: center;
             gap: 8px;
         }
+
+        /* === PRICE LIST STYLES (TAB SYSTEM) === */
+        .price-tabs {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .tab-btn {
+            background-color: #f1f1f1;
+            color: #555;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.85em;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+        }
+        .tab-btn.active, .tab-btn:hover {
+            background-color: #6b1d2f;
+            color: white;
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Price Tables */
+        .price-table-wrapper { overflow-x: auto; margin-bottom: 15px; }
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+            text-align: left;
+        }
+        .price-table th {
+            background-color: #6b1d2f;
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+        }
+        .price-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .price-table tr:nth-child(even) { background-color: #fdfdfd; }
+        .price-table tr:hover { background-color: #fbf0f2; }
+        .price-highlight { font-weight: 700; color: #6b1d2f; }
         
+        .price-note {
+            font-size: 0.82em;
+            color: #666;
+            background: #fafafa;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 3px solid #6b1d2f;
+            margin-top: 10px;
+        }
+
         /* Contact Info Details */
         .contact-info p { margin-bottom: 10px; }
         .wa-inline-btn {
@@ -299,7 +353,7 @@
         .map-container { margin-top: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .map-container iframe { width: 100%; height: 350px; border: 0; }
         
-        /* === TOMBOL WHATSAPP MELAYANG BULAT (ICON ONLY) === */
+        /* FLOATING WA BUTTON BULAT */
         .floating-wa {
             position: fixed;
             bottom: 25px;
@@ -345,6 +399,7 @@
                 <li><a href="#" class="active">BERANDA</a></li>
                 <li><a href="#keunggulan">KEUNGGULAN</a></li>
                 <li><a href="#layanan">LAYANAN</a></li>
+                <li><a href="#pricelist">PRICELIST</a></li>
                 <li><a href="#lokasi">KONTAK & LOKASI</a></li>
                 <li><a href="https://wa.me/6285188243665" target="_blank" class="btn-nav-cta">CEK ONLINE GRATIS <i class="fa-solid fa-chevron-right" style="font-size: 0.8em;"></i></a></li>
             </ul>
@@ -406,6 +461,161 @@
             </ul>
         </div>
 
+        <!-- PRICELIST SECTION -->
+        <div class="card" id="pricelist">
+            <h2><i class="fa-solid fa-tags"></i> Daftar Harga (Pricelist Estimasi)</h2>
+            <p style="margin-bottom: 15px; font-size: 0.95em;">Pilih kategori servis di bawah ini untuk melihat estimasi biaya:</p>
+
+            <!-- TAB MENU -->
+            <div class="price-tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'tab-maintenance')">Maintenance & Software</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab-storage')">Storage (SSD / HDD)</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab-ram')">Upgrade RAM</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab-repair')">Repair & Sparepart</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab-smartphone')">Smartphone</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab-terms')">S & K Garansi</button>
+            </div>
+
+            <!-- TAB 1: MAINTENANCE & SOFTWARE -->
+            <div id="tab-maintenance" class="tab-content active">
+                <div class="price-table-wrapper">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Layanan Cleaning & Re-Pasta</th>
+                                <th>Estimasi Biaya</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Laptop General</td><td class="price-highlight">Rp 175.000</td></tr>
+                            <tr><td>Laptop Ultrabook / Half Gaming</td><td class="price-highlight">Rp 250.000</td></tr>
+                            <tr><td>Laptop Gaming Series (ROG, TUF, OMEN, Legion, dll)</td><td class="price-highlight">Rp 325.000</td></tr>
+                            <tr><td>MacBook (Pasta Z3 / Z5 / Noctua NT-H1)</td><td class="price-highlight">Rp 275.000 - Rp 425.000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="price-table-wrapper">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Software & Operating System</th>
+                                <th>Estimasi Biaya</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Re-Install OS Windows (Include Apps Standar)</td><td class="price-highlight">Rp 175.000</td></tr>
+                            <tr><td>Re-Install macOS</td><td class="price-highlight">Rp 275.000 - Rp 300.000</td></tr>
+                            <tr><td>Install Aplikasi Tambahan (Windows/Mac)</td><td class="price-highlight">Rp 100.000 - Rp 125.000</td></tr>
+                            <tr><td>Backup Data (Per GB)</td><td class="price-highlight">Rp 1.000 / GB</td></tr>
+                            <tr><td>Bypass iCloud Mac / iPhone</td><td class="price-highlight">Rp 925.000 - Rp 3.025.000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 2: STORAGE (SSD / HDD) -->
+            <div id="tab-storage" class="tab-content">
+                <div class="price-table-wrapper">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Kategori SSD</th>
+                                <th>Kapasitas</th>
+                                <th>Estimasi Total (Part + Jasa Pasang + OS)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td rowspan="3"><strong>SSD 2.5" SATA</strong></td><td>128 GB - 256 GB</td><td class="price-highlight">Rp 1.001.000 - Rp 2.185.000</td></tr>
+                            <tr><td>512 GB - 1 TB</td><td class="price-highlight">Rp 2.460.000 - Rp 3.821.000</td></tr>
+                            <tr><td>2 TB</td><td class="price-highlight">Rp 6.126.000</td></tr>
+                            
+                            <tr><td rowspan="2"><strong>SSD M.2 NVMe Gen 3/4</strong></td><td>256 GB - 512 GB</td><td class="price-highlight">Rp 2.164.000 - Rp 2.630.000</td></tr>
+                            <tr><td>1 TB - 2 TB</td><td class="price-highlight">Rp 3.835.000 - Rp 6.303.000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="price-note">*Biaya jasa standar pemasangan & re-install OS terhitung Rp 200.000 (Included pada paket Subtotal).</div>
+            </div>
+
+            <!-- TAB 3: UPGRADE RAM -->
+            <div id="tab-ram" class="tab-content">
+                <div class="price-table-wrapper">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Tipe RAM</th>
+                                <th>Kapasitas</th>
+                                <th>Estimasi Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>DDR3 / PC3L (1600 MHz)</td><td>4 GB / 8 GB</td><td class="price-highlight">Rp 534.000 / Rp 859.000</td></tr>
+                            <tr><td>DDR4 / PC4 (2400 / 2666 / 3200 MHz)</td><td>8 GB / 16 GB / 32 GB</td><td class="price-highlight">Rp 1.740.000 - Rp 8.198.000</td></tr>
+                            <tr><td>DDR5 / PC5 (5600 MHz)</td><td>8 GB / 16 GB / 32 GB</td><td class="price-highlight">Rp 4.130.000 - Rp 12.815.000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 4: REPAIR & SPAREPARTS -->
+            <div id="tab-repair" class="tab-content">
+                <div class="price-table-wrapper">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Perbaikan / Pergantian Part</th>
+                                <th>Mulai Dari (Start From)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Ganti Layar LCD (OEM)</td><td class="price-highlight">Rp 385.000</td></tr>
+                            <tr><td>Ganti Keyboard (Slide / Tanam)</td><td class="price-highlight">Rp 385.000 - Rp 585.000</td></tr>
+                            <tr><td>Perbaikan Mati Total (Matot) / IC</td><td class="price-highlight">Rp 685.000 - Rp 2.000.000</td></tr>
+                            <tr><td>Ganti Baterai (Slide / Tanam)</td><td class="price-highlight">Rp 485.000 - Rp 635.000</td></tr>
+                            <tr><td>Perbaikan Port Charging / USB / HDMI</td><td class="price-highlight">Rp 385.000 - Rp 700.000</td></tr>
+                            <tr><td>Perbaikan Engsel / Fan / Overheat</td><td class="price-highlight">Rp 235.000 - Rp 485.000</td></tr>
+                            <tr><td>Water Damage / Reball Chipset</td><td class="price-highlight">Rp 1.000.000 - Rp 1.500.000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 5: SMARTPHONE -->
+            <div id="tab-smartphone" class="tab-content">
+                <div class="price-table-wrapper">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Layanan Servis Smartphone</th>
+                                <th>Mulai Dari (Start From)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Ganti LCD (OEM)</td><td class="price-highlight">Rp 385.000</td></tr>
+                            <tr><td>Ganti Baterai (OEM)</td><td class="price-highlight">Rp 335.000</td></tr>
+                            <tr><td>Port Charging / Port Mic / Flexible Volume</td><td class="price-highlight">Rp 285.000 - Rp 385.000</td></tr>
+                            <tr><td>Speaker Buzzer / Wi-Fi Card</td><td class="price-highlight">Rp 185.000 - Rp 335.000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 6: S & K GARANSI -->
+            <div id="tab-terms" class="tab-content">
+                <div class="price-note">
+                    <strong style="color: #6b1d2f; font-size: 1.1em;">Syarat & Ketentuan Servis:</strong><br><br>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li><strong>Bawa Sparepart Sendiri:</strong> Dikenakan biaya jasa pasang (Standar: Rp 150.000 - Rp 230.000 | Gaming: Rp 190.000 - Rp 270.000) tanpa garansi dari toko.</li>
+                        <li><strong>Garansi Resmi Toko:</strong> Berlaku 1 Bulan hingga 1 Tahun (tergantung jenis sparepart & layanan).</li>
+                        <li><strong>Ketentuan Garansi:</strong> Garansi tidak berlaku apabila terjadi kesalahan penggunaan (*human error*, terkena cairan, atau segel rusak).</li>
+                        <li><strong>Pengecekan Kendala:</strong> 100% GRATIS tanpa dipungut biaya jika batal servis.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
         <!-- Kontak & Alamat + MAPS -->
         <div class="card" id="lokasi">
             <h2><i class="fa-solid fa-location-dot"></i> Alamat & Jam Operasional</h2>
@@ -420,7 +630,6 @@
                 </p>
             </div>
             
-            <!-- Peta Google Maps Interaktif (Resmi Terbaru) -->
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.5623161079825!2d107.7744965!3d-6.942794499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c5386d99530f%3A0xb984eade85016a8b!2sPSC%20Service%20Laptop%20Macbook%20Jatinangor!5e0!3m2!1sen!2sid!4v1785297121139!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
@@ -438,7 +647,7 @@
 
     </div>
 
-    <!-- TOMBOL WHATSAPP MELAYANG BULAT (ICON ONLY) -->
+    <!-- TOMBOL WHATSAPP MELAYANG BULAT -->
     <a href="https://wa.me/6285188243665" class="floating-wa" target="_blank" aria-label="Chat WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
@@ -447,14 +656,14 @@
         <p>&copy; 2026 Paramount Star Computer (PSC Jatinangor). All Rights Reserved.</p>
     </footer>
 
-    <!-- JAVASCRIPT UNTUK KLIK MENU HP -->
+    <!-- JAVASCRIPT LOGIC -->
     <script>
+        // Hamburger Menu Toggle
         const menuBtn = document.getElementById('mobile-menu-btn');
         const navMenu = document.getElementById('nav-menu');
 
         menuBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            
             const icon = menuBtn.querySelector('i');
             if (navMenu.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
@@ -473,6 +682,21 @@
                 icon.classList.add('fa-bars');
             });
         });
+
+        // Price List Tab Switcher
+        function openTab(evt, tabName) {
+            let i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
     </script>
 
 </body>
