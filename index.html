@@ -307,14 +307,41 @@
         .price-table tr:hover { background-color: #fbf0f2; }
         .price-highlight { font-weight: 700; color: #6b1d2f; }
         
-        .price-note {
-            font-size: 0.82em;
-            color: #666;
+        /* Terms Style Structure */
+        .terms-box {
             background: #fafafa;
-            padding: 12px;
-            border-radius: 6px;
-            border-left: 3px solid #6b1d2f;
-            margin-top: 10px;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+        .terms-group { margin-bottom: 18px; }
+        .terms-group h4 {
+            color: #6b1d2f;
+            font-size: 1.05em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .terms-group ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .terms-group li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 6px;
+            color: #444;
+        }
+        .terms-group li::before {
+            content: "•";
+            color: #6b1d2f;
+            font-weight: bold;
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+            top: -2px;
         }
 
         /* Contact Info Details */
@@ -545,7 +572,6 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="price-note">*Sudah termasuk jasa pemasangan, re-install OS, aplikasi standar, dan garansi instalasi.</div>
             </div>
 
             <!-- TAB 4: UPGRADE RAM -->
@@ -568,7 +594,7 @@
                 </div>
             </div>
 
-            <!-- TAB 5: REPAIR LAPTOP (HARDWARE/SPAREPART) -->
+            <!-- TAB 5: REPAIR LAPTOP -->
             <div id="tab-repair-laptop" class="tab-content">
                 <div class="price-table-wrapper">
                     <table class="price-table">
@@ -629,16 +655,66 @@
                 </div>
             </div>
 
-            <!-- TAB 7: S & K GARANSI -->
+            <!-- TAB 7: SYARAT & KETENTUAN (LENGKAP DAN TRANSPARAN) -->
             <div id="tab-terms" class="tab-content">
-                <div class="price-note">
-                    <strong style="color: #6b1d2f; font-size: 1.1em;">Syarat & Ketentuan Servis:</strong><br><br>
-                    <ul style="margin-left: 20px; line-height: 1.8;">
-                        <li><strong>Bawa Sparepart Sendiri:</strong> Dikenakan biaya jasa pasang (Standar: Rp 150.000 - Rp 230.000 | Gaming: Rp 190.000 - Rp 270.000) tanpa garansi dari toko.</li>
-                        <li><strong>Garansi Resmi Toko:</strong> Berlaku 1 Bulan hingga 1 Tahun (tergantung jenis sparepart & layanan).</li>
-                        <li><strong>Ketentuan Garansi:</strong> Garansi tidak berlaku apabila terjadi kesalahan penggunaan (*human error*, terkena cairan, atau segel rusak).</li>
-                        <li><strong>Pengecekan Kendala:</strong> 100% GRATIS tanpa dipungut biaya jika batal servis.</li>
-                    </ul>
+                <div class="terms-box">
+                    
+                    <div class="terms-group">
+                        <h4><i class="fa-solid fa-magnifying-glass"></i> 1. Pengecekan & Batal Service</h4>
+                        <ul>
+                            <li>Pengecekan kendala awal unit <strong>100% GRATIS</strong> tanpa dipungut biaya.</li>
+                            <li>Jika teknisi sudah menganalisa kendala dan konsumen memutuskan untuk <strong>batal perbaikan</strong>, tidak ada biaya administrasi / tes yang dikenakan.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-group">
+                        <h4><i class="fa-solid fa-microchip"></i> 2. Upgrade Storage (SSD) & RAM</h4>
+                        <ul>
+                            <li>Harga paket upgrade sudah termasuk biaya Pemasangan, Re-install OS (Bonus Aplikasi Standar), dan Garansi Toko.</li>
+                            <li><strong>Garansi Hardware SSD / RAM Resmi:</strong> Berlaku mulai dari 1 Bulan hingga 1 Tahun (sesuai spesifikasi brand part).</li>
+                            <li>Garansi instalasi software pendukung berlaku selama 1 bulan.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-group">
+                        <h4><i class="fa-solid fa-box-open"></i> 3. Konsumen Bawa Sparepart / SSD Sendiri</h4>
+                        <ul>
+                            <li>Konsumen diperbolehkan membawa part sendiri, dan hanya dikenakan <strong>biaya jasa pasang + install</strong>:
+                                <br>- Laptop Standar: <strong>Rp 150.000 - Rp 230.000</strong>
+                                <br>- Laptop Gaming / MacBook: <strong>Rp 190.000 - Rp 270.000</strong>
+                            </li>
+                            <li>Pihak PSC Jatinangor <strong>TIDAK memberikan garansi</strong> terhadap barang/sparepart yang dibawa sendiri oleh konsumen. Garansi hanya berlaku pada kualitas jasa pemasangan.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-group">
+                        <h4><i class="fa-solid fa-database"></i> 4. Keamanan Data Konsumen</h4>
+                        <ul>
+                            <li>Konsumen wajib mengamankan / melakukan <i>backup</i> data-data penting sebelum unit diserahkan.</li>
+                            <li>Pihak PSC Jatinangor tidak bertanggung jawab atas kehilangan data akibat kerusakan pada komponen penyimpanan (Harddisk/SSD) sebelum diproses.</li>
+                            <li>Biaya jasa <i>backup data</i> dikenakan tarif khusus terpisah (Rp 1.000 / GB).</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-group">
+                        <h4><i class="fa-solid fa-triangle-exclamation"></i> 5. Ketentuan Pembatalan Garansi (Void Warranty)</h4>
+                        <ul>
+                            <li>Garansi toko <strong>Otomatis BATAL / VOID</strong> apabila terjadi kesalahan penggunaan (*Human Error*), antara lain:
+                                <br>- Unit terjatuh, pecah, tersiram / terkena cairan, atau korsleting listrik rumah.
+                                <br>- Segel resmi PSC Jatinangor dalam kondisi rusak, terkelupas, atau robek.
+                                <br>- Unit pernah dibongkar oleh pihak luar tanpa konfirmasi PSC.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-group">
+                        <h4><i class="fa-solid fa-clock-history"></i> 6. Batas Waktu Pengambilan Unit</h4>
+                        <ul>
+                            <li>Unit yang sudah selesai diperbaiki atau dikonfirmasi batal service, wajib diambil oleh konsumen dalam kurun waktu <strong>maksimal 30 hari</strong> sejak pemberitahuan resmi via WhatsApp.</li>
+                            <li>Pengambilan unit di atas 30 hari tanpa konfirmasi kabar berada di luar tanggung jawab keamanan pihak toko.</li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
 
