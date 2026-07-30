@@ -299,29 +299,28 @@
         .map-container { margin-top: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .map-container iframe { width: 100%; height: 350px; border: 0; }
         
-        /* === TOMBOL WHATSAPP MELAYANG (FLOATING WA) === */
+        /* === TOMBOL WHATSAPP MELAYANG BULAT (ICON ONLY) === */
         .floating-wa {
             position: fixed;
             bottom: 25px;
             right: 25px;
             background-color: #25D366;
             color: white;
-            padding: 12px 20px;
-            border-radius: 50px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95em;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
             z-index: 9999;
             transition: all 0.3s ease;
         }
-        .floating-wa i { font-size: 1.3em; }
+        .floating-wa i { font-size: 1.8em; }
         .floating-wa:hover {
             background-color: #1eb854;
-            transform: scale(1.05);
+            transform: scale(1.1);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
         }
 
@@ -439,9 +438,9 @@
 
     </div>
 
-    <!-- TOMBOL WA MELAYANG -->
-    <a href="https://wa.me/6285188243665" class="floating-wa" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
+    <!-- TOMBOL WHATSAPP MELAYANG BULAT (ICON ONLY) -->
+    <a href="https://wa.me/6285188243665" class="floating-wa" target="_blank" aria-label="Chat WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <footer>
