@@ -368,6 +368,39 @@
             top: -2px;
         }
 
+        /* === PAYMENT BADGES === */
+        .payment-box {
+            background: #fbf0f2;
+            border: 1px solid #f0d5da;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+        .payment-box h4 {
+            color: #6b1d2f;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1em;
+        }
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .pay-tag {
+            background: white;
+            color: #6b1d2f;
+            border: 1px solid #e2c2c8;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.85em;
+        }
+
         /* === TESTIMONI SECTION === */
         .testimonial-grid {
             display: grid;
@@ -791,7 +824,16 @@
                     </div>
 
                     <div class="terms-group">
-                        <h4><i class="fa-solid fa-microchip"></i> 2. Upgrade Storage (SSD) & RAM</h4>
+                        <h4><i class="fa-solid fa-wallet"></i> 2. Metode Pembayaran Cashless (Non-Tunai)</h4>
+                        <ul>
+                            <li>Kami mengutamakan pembayaran secara non-tunai demi keamanan dan kemudahan transaksi.</li>
+                            <li><strong>Metode yang Didukung:</strong> Transfer Bank (BCA & Bank Jago), E-Wallet (GoPay, DANA, ShopeePay, OVO), serta Scan Barcode QRIS.</li>
+                            <li>Pembayaran tunai (*cash*) tetap dapat dilayani namun tidak disarankan (*diutamakan non-tunai*).</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-group">
+                        <h4><i class="fa-solid fa-microchip"></i> 3. Upgrade Storage (SSD) & RAM</h4>
                         <ul>
                             <li>Harga paket upgrade sudah termasuk biaya Pemasangan, Re-install OS (Bonus Aplikasi Standar), dan Garansi Toko.</li>
                             <li><strong>Garansi Hardware SSD / RAM Resmi:</strong> Berlaku mulai dari 1 Bulan hingga 1 Tahun (sesuai spesifikasi brand part).</li>
@@ -800,7 +842,7 @@
                     </div>
 
                     <div class="terms-group">
-                        <h4><i class="fa-solid fa-box-open"></i> 3. Konsumen Bawa Sparepart / SSD Sendiri</h4>
+                        <h4><i class="fa-solid fa-box-open"></i> 4. Konsumen Bawa Sparepart / SSD Sendiri</h4>
                         <ul>
                             <li>Konsumen diperbolehkan membawa part sendiri, dan hanya dikenakan <strong>biaya jasa pasang + install</strong>:
                                 <br>- Laptop Standar: <strong>Rp 150.000 - Rp 230.000</strong>
@@ -811,7 +853,7 @@
                     </div>
 
                     <div class="terms-group">
-                        <h4><i class="fa-solid fa-database"></i> 4. Keamanan Data Konsumen</h4>
+                        <h4><i class="fa-solid fa-database"></i> 5. Keamanan Data Konsumen</h4>
                         <ul>
                             <li>Konsumen wajib mengamankan / melakukan <i>backup</i> data-data penting sebelum unit diserahkan.</li>
                             <li>Pihak PSC Jatinangor tidak bertanggung jawab atas kehilangan data akibat kerusakan pada komponen penyimpanan (Harddisk/SSD) sebelum diproses.</li>
@@ -820,7 +862,7 @@
                     </div>
 
                     <div class="terms-group">
-                        <h4><i class="fa-solid fa-triangle-exclamation"></i> 5. Ketentuan Pembatalan Garansi (Void Warranty)</h4>
+                        <h4><i class="fa-solid fa-triangle-exclamation"></i> 6. Ketentuan Pembatalan Garansi (Void Warranty)</h4>
                         <ul>
                             <li>Garansi toko <strong>Otomatis BATAL / VOID</strong> apabila terjadi kesalahan penggunaan (*Human Error*), antara lain:
                                 <br>- Unit terjatuh, pecah, tersiram / terkena cairan, atau korsleting listrik rumah.
@@ -831,7 +873,7 @@
                     </div>
 
                     <div class="terms-group">
-                        <h4><i class="fa-solid fa-clock-history"></i> 6. Batas Waktu Pengambilan Unit</h4>
+                        <h4><i class="fa-solid fa-clock-history"></i> 7. Batas Waktu Pengambilan Unit</h4>
                         <ul>
                             <li>Unit yang sudah selesai diperbaiki atau dikonfirmasi batal service, wajib diambil oleh konsumen dalam kurun waktu <strong>maksimal 30 hari</strong> sejak pemberitahuan resmi via WhatsApp.</li>
                             <li>Pengambilan unit di atas 30 hari tanpa konfirmasi kabar berada di luar tanggung jawab keamanan pihak toko.</li>
@@ -901,6 +943,22 @@
                         <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp Sekarang
                     </a>
                 </p>
+
+                <!-- Informasi Pembayaran Cashless -->
+                <div class="payment-box">
+                    <h4><i class="fa-solid fa-wallet"></i> Metode Pembayaran (Diutamakan Non-Tunai / Cashless)</h4>
+                    <p style="font-size: 0.88em; color: #555; margin-bottom: 6px;">Demi kenyamanan bersama, toko kami mengutamakan transaksi digital:</p>
+                    <div class="payment-methods">
+                        <span class="pay-tag"><i class="fa-solid fa-building-columns"></i> Bank BCA</span>
+                        <span class="pay-tag"><i class="fa-solid fa-building-columns"></i> Bank Jago</span>
+                        <span class="pay-tag"><i class="fa-solid fa-mobile-screen"></i> GoPay</span>
+                        <span class="pay-tag"><i class="fa-solid fa-mobile-screen"></i> DANA</span>
+                        <span class="pay-tag"><i class="fa-solid fa-mobile-screen"></i> ShopeePay</span>
+                        <span class="pay-tag"><i class="fa-solid fa-mobile-screen"></i> OVO</span>
+                        <span class="pay-tag"><i class="fa-solid fa-qrcode"></i> QRIS Barcode</span>
+                    </div>
+                    <p style="font-size: 0.8em; color: #777; margin-top: 8px;">*Pembayaran tunai (Cash) tetap bisa dilayani, namun sangat tidak disarankan.</p>
+                </div>
             </div>
             
             <div class="map-container">
