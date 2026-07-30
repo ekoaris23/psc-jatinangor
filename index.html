@@ -8,6 +8,9 @@
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="favicon.png">
 
+    <!-- FONT AWESOME (IKON RESMI WHATSAPP, INSTAGRAM, THREADS, FACEBOOK, DLL) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
         body { background-color: #f8f9fa; color: #2b2b2b; line-height: 1.6; }
@@ -93,6 +96,9 @@
             font-weight: 600;
             border-radius: 8px;
             transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
         .btn-secondary-info:hover { background-color: rgba(255, 255, 255, 0.25); }
 
@@ -123,7 +129,7 @@
             border-top: 4px solid #6b1d2f;
         }
         
-        h2 { color: #6b1d2f; margin-bottom: 18px; border-bottom: 2px solid #f1f1f1; padding-bottom: 10px; font-size: 1.35em; font-weight: 700; }
+        h2 { color: #6b1d2f; margin-bottom: 18px; border-bottom: 2px solid #f1f1f1; padding-bottom: 10px; font-size: 1.35em; font-weight: 700; display: flex; align-items: center; gap: 10px; }
         ul { list-style-position: inside; margin-bottom: 15px; }
         li { margin-bottom: 8px; }
         
@@ -137,11 +143,16 @@
             border-radius: 8px; 
             font-weight: 600; 
             font-size: 0.9em; 
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
         
+        .social-links { display: flex; flex-wrap: wrap; gap: 10px; }
         .social-links a { 
-            display: inline-block; 
-            margin-right: 12px; 
+            display: inline-flex; 
+            align-items: center;
+            gap: 8px;
             color: #6b1d2f; 
             text-decoration: none; 
             font-weight: 700; 
@@ -170,10 +181,11 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             z-index: 9999;
             transition: all 0.3s ease;
         }
+        .floating-wa i { font-size: 1.3em; }
         .floating-wa:hover {
             background-color: #1eb854;
             transform: scale(1.05);
@@ -191,22 +203,24 @@
             <img src="logo.png" alt="Logo Paramount Star Computer">
         </div>
         
-        <div class="tag-pill">✨ Solusi Servis Terpercaya di Jatinangor</div>
+        <div class="tag-pill"><i class="fa-solid fa-sparkles"></i> Solusi Servis Terpercaya di Jatinangor</div>
         
         <h1>Servis Laptop & MacBook Cepat, Transparan, & Terjangkau</h1>
         <p>Solusi andalan mahasiswa UNPAD, ITB, IPDN, & IKOPIN. Cek kendala gratis tanpa biaya tersembunyi!</p>
         
         <div class="hero-cta">
             <a href="https://wa.me/6285188243665" class="btn-primary-wa" target="_blank">
-                💬 Konsultasi Gratis (WhatsApp)
+                <i class="fa-brands fa-whatsapp"></i> Konsultasi Gratis (WhatsApp)
             </a>
-            <a href="#lokasi" class="btn-secondary-info">📍 Lokasi Toko</a>
+            <a href="#lokasi" class="btn-secondary-info">
+                <i class="fa-solid fa-location-dot"></i> Lokasi Toko
+            </a>
         </div>
 
         <div class="trust-bar">
-            <div class="trust-item">✅ Free Pengecekan</div>
-            <div class="trust-item">✅ Antar-Jemput Gratis</div>
-            <div class="trust-item">✅ Bergaransi Resmi</div>
+            <div class="trust-item"><i class="fa-solid fa-circle-check" style="color: #25D366;"></i> Free Pengecekan</div>
+            <div class="trust-item"><i class="fa-solid fa-circle-check" style="color: #25D366;"></i> Antar-Jemput Gratis</div>
+            <div class="trust-item"><i class="fa-solid fa-circle-check" style="color: #25D366;"></i> Bergaransi Resmi</div>
         </div>
     </header>
 
@@ -214,18 +228,18 @@
         
         <!-- Keunggulan Utamanya -->
         <div class="card">
-            <h2>🔥 Keunggulan Layanan Kami</h2>
+            <h2><i class="fa-solid fa-fire"></i> Keunggulan Layanan Kami</h2>
             <div class="badge-list">
-                <div class="badge">FREE JASA PENGECEKAN</div>
-                <div class="badge">FREE ANTAR & JEMPUT BARANG</div>
-                <div class="badge">FREE BIAYA ONSITE (Jatinangor & Sekitarnya)</div>
-                <div class="badge">FREE KONSULTASI</div>
+                <div class="badge"><i class="fa-solid fa-magnifying-glass"></i> FREE JASA PENGECEKAN</div>
+                <div class="badge"><i class="fa-solid fa-truck-fast"></i> FREE ANTAR & JEMPUT BARANG</div>
+                <div class="badge"><i class="fa-solid fa-house-laptop"></i> FREE BIAYA ONSITE (Jatinangor & Sekitarnya)</div>
+                <div class="badge"><i class="fa-solid fa-comments"></i> FREE KONSULTASI</div>
             </div>
         </div>
 
         <!-- Melayani & Layanan -->
         <div class="card">
-            <h2>🛠️ Layanan Servis</h2>
+            <h2><i class="fa-solid fa-wrench"></i> Layanan Servis</h2>
             <p><strong>Melayani Perbaikan:</strong> Laptop Semua Merk | MacBook | Komputer (PC)</p>
             <br>
             <ul>
@@ -240,7 +254,7 @@
 
         <!-- Kontak & Alamat + MAPS -->
         <div class="card" id="lokasi">
-            <h2>📍 Alamat & Jam Operasional</h2>
+            <h2><i class="fa-solid fa-location-dot"></i> Alamat & Jam Operasional</h2>
             <p><strong>Alamat:</strong> Jalan Puri Indah Jatinangor Blok A3 No. 21, Cikeruh, Kec. Jatinangor, Kab. Sumedang, Jawa Barat 45363</p>
             <p><strong>Jam Buka:</strong> Senin - Sabtu (11.00 - 20.00 WIB)</p>
             
@@ -252,10 +266,11 @@
 
         <!-- Media Sosial -->
         <div class="card">
-            <h2>📲 Ikuti Media Sosial Kami</h2>
+            <h2><i class="fa-solid fa-share-nodes"></i> Ikuti Media Sosial Kami</h2>
             <div class="social-links">
-                <a href="https://www.instagram.com/paramountstarcomputerpsc" target="_blank">📷 Instagram</a>
-                <a href="https://www.facebook.com/share/1EBLwnNSL3/" target="_blank">📘 Facebook</a>
+                <a href="https://www.instagram.com/paramountstarcomputerpsc" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.threads.net/@paramountstarpsc" target="_blank"><i class="fa-brands fa-threads"></i> Threads</a>
+                <a href="https://www.facebook.com/share/1EBLwnNSL3/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
             </div>
         </div>
 
@@ -263,7 +278,7 @@
 
     <!-- TOMBOL WA MELAYANG -->
     <a href="https://wa.me/6285188243665" class="floating-wa" target="_blank">
-        💬 Chat WhatsApp
+        <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
     </a>
 
     <footer>
