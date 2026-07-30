@@ -464,63 +464,70 @@
         <!-- PRICELIST SECTION -->
         <div class="card" id="pricelist">
             <h2><i class="fa-solid fa-tags"></i> Daftar Harga (Pricelist Estimasi)</h2>
-            <p style="margin-bottom: 15px; font-size: 0.95em;">Pilih kategori servis di bawah ini untuk melihat estimasi biaya:</p>
+            <p style="margin-bottom: 15px; font-size: 0.95em;">Pilih kategori perangkat atau perbaikan di bawah ini:</p>
 
             <!-- TAB MENU -->
             <div class="price-tabs">
-                <button class="tab-btn active" onclick="openTab(event, 'tab-maintenance')">Maintenance & Software</button>
-                <button class="tab-btn" onclick="openTab(event, 'tab-storage')">Storage (SSD / HDD)</button>
-                <button class="tab-btn" onclick="openTab(event, 'tab-ram')">Upgrade RAM</button>
-                <button class="tab-btn" onclick="openTab(event, 'tab-repair')">Repair & Sparepart</button>
-                <button class="tab-btn" onclick="openTab(event, 'tab-smartphone')">Smartphone</button>
-                <button class="tab-btn" onclick="openTab(event, 'tab-terms')">S & K Garansi</button>
+                <button class="tab-btn active" onclick="openTab(event, 'tab-maint-laptop')"><i class="fa-solid fa-laptop"></i> Maintenance (Laptop)</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab-maint-mac')"><i class="fa-brands fa-apple"></i> Maintenance (MacBook)</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab-storage')"><i class="fa-solid fa-hard-drive"></i> Storage (SSD/HDD)</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab-ram')"><i class="fa-solid fa-memory"></i> Upgrade RAM</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab-repair-laptop')"><i class="fa-solid fa-screwdriver-wrench"></i> Repair Laptop</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab-repair-mac')"><i class="fa-brands fa-apple"></i> Repair MacBook & HP</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab-terms')"><i class="fa-solid fa-shield-halved"></i> S & K Garansi</button>
             </div>
 
-            <!-- TAB 1: MAINTENANCE & SOFTWARE -->
-            <div id="tab-maintenance" class="tab-content active">
+            <!-- TAB 1: MAINTENANCE LAPTOP (WINDOWS/PC) -->
+            <div id="tab-maint-laptop" class="tab-content active">
                 <div class="price-table-wrapper">
                     <table class="price-table">
                         <thead>
                             <tr>
-                                <th>Layanan Cleaning & Re-Pasta</th>
+                                <th>Layanan Maintenance Laptop Biasa</th>
                                 <th>Estimasi Biaya</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>Laptop General</td><td class="price-highlight">Rp 175.000</td></tr>
-                            <tr><td>Laptop Ultrabook / Half Gaming</td><td class="price-highlight">Rp 250.000</td></tr>
-                            <tr><td>Laptop Gaming Series (ROG, TUF, OMEN, Legion, dll)</td><td class="price-highlight">Rp 325.000</td></tr>
-                            <tr><td>MacBook (Pasta Z3 / Z5 / Noctua NT-H1)</td><td class="price-highlight">Rp 275.000 - Rp 425.000</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="price-table-wrapper">
-                    <table class="price-table">
-                        <thead>
-                            <tr>
-                                <th>Software & Operating System</th>
-                                <th>Estimasi Biaya</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Re-Install OS Windows (Include Apps Standar)</td><td class="price-highlight">Rp 175.000</td></tr>
-                            <tr><td>Re-Install macOS</td><td class="price-highlight">Rp 275.000 - Rp 300.000</td></tr>
-                            <tr><td>Install Aplikasi Tambahan (Windows/Mac)</td><td class="price-highlight">Rp 100.000 - Rp 125.000</td></tr>
+                            <tr><td>Cleaning & Re-Paste Laptop General (i3 Gen 5 kebawah / Celeron)</td><td class="price-highlight">Rp 175.000</td></tr>
+                            <tr><td>Cleaning & Re-Paste Ultrabook / Half Gaming</td><td class="price-highlight">Rp 250.000</td></tr>
+                            <tr><td>Cleaning & Re-Paste Gaming Series (ROG, TUF, OMEN, Legion, dll)</td><td class="price-highlight">Rp 325.000</td></tr>
+                            <tr><td>Re-Install OS Windows (Include Software Standar)</td><td class="price-highlight">Rp 175.000</td></tr>
+                            <tr><td>Install Aplikasi Tambahan Windows</td><td class="price-highlight">Rp 100.000</td></tr>
                             <tr><td>Backup Data (Per GB)</td><td class="price-highlight">Rp 1.000 / GB</td></tr>
-                            <tr><td>Bypass iCloud Mac / iPhone</td><td class="price-highlight">Rp 925.000 - Rp 3.025.000</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- TAB 2: STORAGE (SSD / HDD) -->
+            <!-- TAB 2: MAINTENANCE MACBOOK -->
+            <div id="tab-maint-mac" class="tab-content">
+                <div class="price-table-wrapper">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Layanan Maintenance MacBook</th>
+                                <th>Estimasi Biaya</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Cleaning & Re-Paste MacBook DC Z3</td><td class="price-highlight">Rp 275.000</td></tr>
+                            <tr><td>Cleaning & Re-Paste MacBook DC Z5</td><td class="price-highlight">Rp 375.000</td></tr>
+                            <tr><td>Cleaning & Re-Paste MacBook Thermal Noctua NT-H1</td><td class="price-highlight">Rp 425.000</td></tr>
+                            <tr><td>Re-Install macOS</td><td class="price-highlight">Rp 275.000 - Rp 300.000</td></tr>
+                            <tr><td>Install Aplikasi macOS</td><td class="price-highlight">Rp 125.000</td></tr>
+                            <tr><td>Bypass iCloud Mac</td><td class="price-highlight">Rp 3.025.000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 3: STORAGE (SSD / HDD) -->
             <div id="tab-storage" class="tab-content">
                 <div class="price-table-wrapper">
                     <table class="price-table">
                         <thead>
                             <tr>
-                                <th>Kategori SSD</th>
+                                <th>Tipe Storage</th>
                                 <th>Kapasitas</th>
                                 <th>Estimasi Total (Part + Jasa Pasang + OS)</th>
                             </tr>
@@ -532,13 +539,16 @@
                             
                             <tr><td rowspan="2"><strong>SSD M.2 NVMe Gen 3/4</strong></td><td>256 GB - 512 GB</td><td class="price-highlight">Rp 2.164.000 - Rp 2.630.000</td></tr>
                             <tr><td>1 TB - 2 TB</td><td class="price-highlight">Rp 3.835.000 - Rp 6.303.000</td></tr>
+                            
+                            <tr><td rowspan="2"><strong>HDD Internal 2.5"</strong></td><td>500 GB - 1 TB</td><td class="price-highlight">Rp 557.500 - Rp 1.012.500</td></tr>
+                            <tr><td>2 TB</td><td class="price-highlight">Rp 1.958.900</td></tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="price-note">*Biaya jasa standar pemasangan & re-install OS terhitung Rp 200.000 (Included pada paket Subtotal).</div>
+                <div class="price-note">*Sudah termasuk jasa pemasangan, re-install OS, aplikasi standar, dan garansi instalasi.</div>
             </div>
 
-            <!-- TAB 3: UPGRADE RAM -->
+            <!-- TAB 4: UPGRADE RAM -->
             <div id="tab-ram" class="tab-content">
                 <div class="price-table-wrapper">
                     <table class="price-table">
@@ -551,57 +561,75 @@
                         </thead>
                         <tbody>
                             <tr><td>DDR3 / PC3L (1600 MHz)</td><td>4 GB / 8 GB</td><td class="price-highlight">Rp 534.000 / Rp 859.000</td></tr>
-                            <tr><td>DDR4 / PC4 (2400 / 2666 / 3200 MHz)</td><td>8 GB / 16 GB / 32 GB</td><td class="price-highlight">Rp 1.740.000 - Rp 8.198.000</td></tr>
+                            <tr><td>DDR4 / PC4 (2400 / 2666 / 3200 MHz)</td><td>4 GB / 8 GB / 16 GB / 32 GB</td><td class="price-highlight">Rp 922.000 - Rp 8.198.000</td></tr>
                             <tr><td>DDR5 / PC5 (5600 MHz)</td><td>8 GB / 16 GB / 32 GB</td><td class="price-highlight">Rp 4.130.000 - Rp 12.815.000</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- TAB 4: REPAIR & SPAREPARTS -->
-            <div id="tab-repair" class="tab-content">
+            <!-- TAB 5: REPAIR LAPTOP (HARDWARE/SPAREPART) -->
+            <div id="tab-repair-laptop" class="tab-content">
                 <div class="price-table-wrapper">
                     <table class="price-table">
                         <thead>
                             <tr>
-                                <th>Perbaikan / Pergantian Part</th>
+                                <th>Perbaikan Laptop Biasa</th>
                                 <th>Mulai Dari (Start From)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr><td>Ganti Layar LCD (OEM)</td><td class="price-highlight">Rp 385.000</td></tr>
-                            <tr><td>Ganti Keyboard (Slide / Tanam)</td><td class="price-highlight">Rp 385.000 - Rp 585.000</td></tr>
-                            <tr><td>Perbaikan Mati Total (Matot) / IC</td><td class="price-highlight">Rp 685.000 - Rp 2.000.000</td></tr>
-                            <tr><td>Ganti Baterai (Slide / Tanam)</td><td class="price-highlight">Rp 485.000 - Rp 635.000</td></tr>
-                            <tr><td>Perbaikan Port Charging / USB / HDMI</td><td class="price-highlight">Rp 385.000 - Rp 700.000</td></tr>
-                            <tr><td>Perbaikan Engsel / Fan / Overheat</td><td class="price-highlight">Rp 235.000 - Rp 485.000</td></tr>
-                            <tr><td>Water Damage / Reball Chipset</td><td class="price-highlight">Rp 1.000.000 - Rp 1.500.000</td></tr>
+                            <tr><td>Ganti Keyboard Slide / Tanam (OEM)</td><td class="price-highlight">Rp 385.000 - Rp 585.000</td></tr>
+                            <tr><td>Ganti Baterai Slide / Tanam (OEM)</td><td class="price-highlight">Rp 485.000 - Rp 635.000</td></tr>
+                            <tr><td>Perbaikan Mati Total (Matot)</td><td class="price-highlight">Rp 685.000</td></tr>
+                            <tr><td>Perbaikan Tidak Ngecas / Port Charging</td><td class="price-highlight">Rp 385.000</td></tr>
+                            <tr><td>Laptop Panas / Overheat / Ganti Fan</td><td class="price-highlight">Rp 235.000 - Rp 485.000</td></tr>
+                            <tr><td>Speaker Mati / Sember / Port USB</td><td class="price-highlight">Rp 285.000 - Rp 485.000</td></tr>
+                            <tr><td>Webcam / Camera / Engsel</td><td class="price-highlight">Rp 285.000 - Rp 385.000</td></tr>
+                            <tr><td>Perbaikan Modul Wi-Fi / Koneksi</td><td class="price-highlight">Rp 285.000</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- TAB 5: SMARTPHONE -->
-            <div id="tab-smartphone" class="tab-content">
+            <!-- TAB 6: REPAIR MACBOOK & HP -->
+            <div id="tab-repair-mac" class="tab-content">
                 <div class="price-table-wrapper">
                     <table class="price-table">
                         <thead>
                             <tr>
-                                <th>Layanan Servis Smartphone</th>
+                                <th>Perbaikan Spesialis MacBook</th>
                                 <th>Mulai Dari (Start From)</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>Ganti LCD (OEM)</td><td class="price-highlight">Rp 385.000</td></tr>
-                            <tr><td>Ganti Baterai (OEM)</td><td class="price-highlight">Rp 335.000</td></tr>
-                            <tr><td>Port Charging / Port Mic / Flexible Volume</td><td class="price-highlight">Rp 285.000 - Rp 385.000</td></tr>
-                            <tr><td>Speaker Buzzer / Wi-Fi Card</td><td class="price-highlight">Rp 185.000 - Rp 335.000</td></tr>
+                            <tr><td>Perbaikan Port Charging MacBook</td><td class="price-highlight">Rp 700.000</td></tr>
+                            <tr><td>MacBook Mati Total (< 2015 / > 2015)</td><td class="price-highlight">Rp 1.500.000 - Rp 2.000.000</td></tr>
+                            <tr><td>Reball Chipset / Not Backlight</td><td class="price-highlight">Rp 1.500.000</td></tr>
+                            <tr><td>Replace IC / Water Damage</td><td class="price-highlight">Rp 1.000.000 - Rp 2.000.000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="price-table-wrapper" style="margin-top: 15px;">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Perbaikan Smartphone</th>
+                                <th>Mulai Dari (Start From)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Ganti LCD / Baterai (OEM)</td><td class="price-highlight">Rp 335.000 - Rp 385.000</td></tr>
+                            <tr><td>Port Charging / Speaker / Flexible Volume</td><td class="price-highlight">Rp 285.000 - Rp 385.000</td></tr>
+                            <tr><td>Bypass iPhone</td><td class="price-highlight">Rp 925.000</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- TAB 6: S & K GARANSI -->
+            <!-- TAB 7: S & K GARANSI -->
             <div id="tab-terms" class="tab-content">
                 <div class="price-note">
                     <strong style="color: #6b1d2f; font-size: 1.1em;">Syarat & Ketentuan Servis:</strong><br><br>
