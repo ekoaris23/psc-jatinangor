@@ -8,13 +8,102 @@
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- FONT AWESOME (IKON RESMI WHATSAPP, INSTAGRAM, THREADS, FACEBOOK, DLL) -->
+    <!-- FONT AWESOME (IKON RESMI) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+        html { scroll-behavior: smooth; }
         body { background-color: #f8f9fa; color: #2b2b2b; line-height: 1.6; }
         
+        /* === HEADER / NAVBAR PRO (GAYA PUSLAB) === */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 12px 0;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #6b1d2f;
+            font-weight: 800;
+            font-size: 1.1em;
+        }
+
+        .nav-logo img {
+            height: 40px;
+            width: auto;
+            border-radius: 4px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #444;
+            font-weight: 700;
+            font-size: 0.88em;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: color 0.2s ease;
+            padding: 6px 0;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #6b1d2f;
+            border-bottom: 2px solid #6b1d2f;
+        }
+
+        .btn-nav-cta {
+            background-color: #6b1d2f;
+            color: white !important;
+            padding: 8px 16px !important;
+            border-radius: 6px;
+            transition: background 0.2s ease !important;
+        }
+
+        .btn-nav-cta:hover {
+            background-color: #380d15 !important;
+            border-bottom: none !important;
+        }
+
+        /* Responsive Navbar */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: flex;
+                gap: 10px;
+                font-size: 0.8em;
+                overflow-x: auto;
+                white-space: nowrap;
+                padding-bottom: 5px;
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+
         /* === HERO SECTION (BERANDA) === */
         .hero { 
             background: linear-gradient(135deg, #380d15 0%, #6b1d2f 60%, #8c283f 100%); 
@@ -26,7 +115,7 @@
         }
         
         .logo-container img {
-            max-width: 150px;
+            max-width: 140px;
             height: auto;
             margin-bottom: 20px;
             border-radius: 8px;
@@ -197,6 +286,23 @@
 </head>
 <body>
 
+    <!-- HEADER / NAVIGATION BAR (PUSLAB STYLE) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="logo.png" alt="Logo PSC">
+                <span>PSC JATINANGOR</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#" class="active">BERANDA</a></li>
+                <li><a href="#keunggulan">KEUNGGULAN</a></li>
+                <li><a href="#layanan">LAYANAN</a></li>
+                <li><a href="#lokasi">KONTAK & LOKASI</a></li>
+                <li><a href="https://wa.me/6285188243665" target="_blank" class="btn-nav-cta">CEK ONLINE GRATIS <i class="fa-solid fa-chevron-right" style="font-size: 0.8em;"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- HERO SECTION / BERANDA -->
     <header class="hero">
         <div class="logo-container">
@@ -227,7 +333,7 @@
     <div class="container">
         
         <!-- Keunggulan Utamanya -->
-        <div class="card">
+        <div class="card" id="keunggulan">
             <h2><i class="fa-solid fa-fire"></i> Keunggulan Layanan Kami</h2>
             <div class="badge-list">
                 <div class="badge"><i class="fa-solid fa-magnifying-glass"></i> FREE JASA PENGECEKAN</div>
@@ -238,7 +344,7 @@
         </div>
 
         <!-- Melayani & Layanan -->
-        <div class="card">
+        <div class="card" id="layanan">
             <h2><i class="fa-solid fa-wrench"></i> Layanan Servis</h2>
             <p><strong>Melayani Perbaikan:</strong> Laptop Semua Merk | MacBook | Komputer (PC)</p>
             <br>
