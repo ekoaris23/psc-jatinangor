@@ -16,7 +16,7 @@
         html { scroll-behavior: smooth; }
         body { background-color: #f8f9fa; color: #2b2b2b; line-height: 1.6; }
         
-        /* === HEADER / NAVBAR PRO (GAYA PUSLAB) === */
+        /* === HEADER / NAVBAR PRO === */
         .navbar {
             background-color: #ffffff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.08);
@@ -46,7 +46,7 @@
         }
 
         .nav-logo img {
-            height: 40px;
+            height: 38px;
             width: auto;
             border-radius: 4px;
         }
@@ -81,26 +81,63 @@
             padding: 8px 16px !important;
             border-radius: 6px;
             transition: background 0.2s ease !important;
+            border-bottom: none !important;
         }
 
         .btn-nav-cta:hover {
             background-color: #380d15 !important;
-            border-bottom: none !important;
         }
 
-        /* Responsive Navbar */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: flex;
-                gap: 10px;
-                font-size: 0.8em;
-                overflow-x: auto;
-                white-space: nowrap;
-                padding-bottom: 5px;
+        /* Hamburger Toggle Button (Sembunyi di Laptop) */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            color: #6b1d2f;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        /* Responsive Navbar (HP / Tablet) */
+        @media (max-width: 820px) {
+            .menu-toggle {
+                display: block;
             }
-            .nav-container {
+
+            .nav-menu {
+                display: none; /* Sembunyi secara default di HP */
                 flex-direction: column;
-                gap: 12px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #ffffff;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                padding: 15px 20px;
+                gap: 15px;
+                align-items: flex-start;
+                border-top: 1px solid #eee;
+            }
+
+            .nav-menu.active {
+                display: flex; /* Muncul saat tombol diklik */
+            }
+
+            .nav-menu a {
+                width: 100%;
+                padding: 8px 0;
+                border-bottom: 1px solid #f5f5f5;
+            }
+
+            .nav-menu a.active {
+                border-bottom: 2px solid #6b1d2f;
+            }
+
+            .btn-nav-cta {
+                width: 100%;
+                text-align: center;
+                margin-top: 5px;
             }
         }
 
@@ -286,14 +323,21 @@
 </head>
 <body>
 
-    <!-- HEADER / NAVIGATION BAR (PUSLAB STYLE) -->
+    <!-- HEADER / NAVIGATION BAR -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">
                 <img src="logo.png" alt="Logo PSC">
                 <span>PSC JATINANGOR</span>
             </a>
-            <ul class="nav-menu">
+            
+            <!-- Tombol Hamburger (Khusus Layar HP) -->
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Buka Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Menu Navigasi -->
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="#" class="active">BERANDA</a></li>
                 <li><a href="#keunggulan">KEUNGGULAN</a></li>
                 <li><a href="#layanan">LAYANAN</a></li>
@@ -390,6 +434,36 @@
     <footer>
         <p>&copy; 2026 Paramount Star Computer (PSC Jatinangor). All Rights Reserved.</p>
     </footer>
+
+    <!-- JAVASCRIPT UNTUK KLIK MENU HP -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            // Ubah ikon antara garis 3 (bars) dan silang (xmark)
+            const icon = menuBtn.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Tutup menu otomatis setelah memilih salah satu menu
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
 
 </body>
 </html>
