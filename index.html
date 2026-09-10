@@ -418,7 +418,7 @@
             font-size: 0.78em;
         }
 
-        /* === REVIEWS HEADER STYLES === */
+        /* === TESTIMONI SECTION === */
         .reviews-header-info {
             display: flex;
             justify-content: space-between;
@@ -457,6 +457,23 @@
             background: #6b1d2f;
             color: #ffffff;
         }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .testimonial-card {
+            background: #fbf0f2;
+            border: 1px solid #f0d5da;
+            padding: 18px;
+            border-radius: 10px;
+            font-size: 0.9em;
+        }
+        .stars { color: #f39c12; margin-bottom: 8px; font-size: 0.9em; }
+        .client-name { font-weight: 700; color: #6b1d2f; margin-top: 10px; font-size: 0.88em; }
+        .client-role { font-size: 0.78em; color: #777; }
 
         /* === CALL TO ACTION (CTA) BANNER === */
         .cta-banner {
@@ -933,9 +950,9 @@
 
         </div>
 
-        <!-- TESTIMONI PELANGGAN (EMBED RESMI GOOGLE MAPS) -->
+        <!-- TESTIMONI PELANGGAN (DARI ULASAN GOOGLE MAPS) -->
         <div class="card" id="testimoni">
-            <h2><i class="fa-solid fa-comments"></i> Ulasan Google Maps</h2>
+            <h2><i class="fa-solid fa-comments"></i> Ulasan Pelanggan Google Maps</h2>
             
             <div class="reviews-header-info">
                 <div class="rating-score">
@@ -943,13 +960,90 @@
                     <span>5.0 / 5.0 Rating Google</span>
                 </div>
                 <a href="https://www.google.com/maps/place/PSC+Service+Laptop+Macbook+Jatinangor/@-6.9427979,107.7745238,17z/data=!4m8!3m7!1s0x2e68c5386d99530f:0xb984eade85016a8b!8m2!3d-6.9427979!4d107.7745238!9m1!1b1!16s%2Fg%2F11nr6gg4zr" target="_blank" class="btn-write-review">
-                    <i class="fa-solid fa-pen"></i> Tulis Ulasan
+                    <i class="fa-solid fa-pen"></i> Tulis Ulasan di Google
                 </a>
             </div>
 
-            <!-- IFRAME ULASAN MAPS DIRECT -->
-            <div style="width: 100%; height: 400px; border-radius: 10px; overflow: hidden; margin-top: 15px;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.5623161079825!2d107.7744965!3d-6.942794499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c5386d99530f%3A0xb984eade85016a8b!2sPSC%20Service%20Laptop%20Macbook%20Jatinangor!5e0!3m2!1sen!2sid!4v1785297121139!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <div class="testimonial-grid">
+                <!-- Ulasan 1: name -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Servicenya lancar, mas"nya ramah, harganya murahhhh, service pc gaming cleaning sama reinstall disini lancar semua, makasih psc 👍"</p>
+                    <div class="client-name">name</div>
+                    <div class="client-role"><i class="fa-brands fa-google"></i> Google Review</div>
+                </div>
+
+                <!-- Ulasan 2: prita s -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"laptoppku tadinya windowsnya gabisaa jadi bisa lagi dan diupgrade jugaa, super puass sm hasilnya 👍"</p>
+                    <div class="client-name">prita s</div>
+                    <div class="client-role"><i class="fa-brands fa-google"></i> Google Review</div>
+                </div>
+
+                <!-- Ulasan 3: St1ll 3xist -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Service macbook disini. Pelayanan nya dari awal ramah dan responsif bgt. Komunikasi antara admin dan teknisinya bagus. Bisa antar jemput barang yg mau diservis, gratis lagi. Trusted dan worth pokoknya"</p>
+                    <div class="client-name">St1ll 3xist</div>
+                    <div class="client-role"><i class="fa-brands fa-google"></i> Google Review</div>
+                </div>
+
+                <!-- Ulasan 4: Nanana S.r.m -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Servisnya mantap, orangnya ramah dan enak diajak konsultasi. Penjelasannya juga jelas, jadi nggak takut salah pilih servis. Recommended 👍"</p>
+                    <div class="client-name">Nanana S.r.m</div>
+                    <div class="client-role"><i class="fa-brands fa-google"></i> Google Review</div>
+                </div>
+
+                <!-- Ulasan 5: Wina Wina -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Pelayanannya ramah dan cepat. Laptop ditangani dengan baik, penjelasannya juga jelas dan transparan. Harganya cukup terjangkau dan hasil servisnya memuaskan. Recommended banget buat yang butuh servis laptop, komputer, atau MacBook di daerah Jatinangor! 👍"</p>
+                    <div class="client-name">Wina Wina</div>
+                    <div class="client-role"><i class="fa-brands fa-google"></i> Google Review</div>
+                </div>
+
+                <!-- Ulasan 6: Amar NurFajrin -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Service Laptop berkualitas nih , service matot laptop jadi nyala kembali. Thx PSC"</p>
+                    <div class="client-name">Amar NurFajrin</div>
+                    <div class="client-role"><i class="fa-brands fa-google"></i> Google Review</div>
+                </div>
+
+                <!-- Ulasan 7: neptu lune -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"pelayanannya bagus, cepat, ramah, dan hasil service laptopnya memuaskan. harganya juga cukup terjangkau. recommended bngt"</p>
+                    <div class="client-name">neptu lune</div>
+                    <div class="client-role"><i class="fa-brands fa-google"></i> Google Review</div>
+                </div>
+
+                <!-- Ulasan 8: Erika Putri -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Puas dengan pelayanan service 2 laptop saya beres dan harganya sangat terjangkau menurutku..terima kasih"</p>
+                    <div class="client-name">Erika Putri</div>
+                    <div class="client-role"><i class="fa-brands fa-google"></i> Local Guide</div>
+                </div>
             </div>
         </div>
 
