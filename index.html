@@ -418,23 +418,50 @@
             font-size: 0.78em;
         }
 
-        /* === TESTIMONI SECTION === */
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 15px;
+        /* === TESTIMONI & WIDGET STYLES === */
+        .reviews-widget-container {
             margin-top: 15px;
-        }
-        .testimonial-card {
-            background: #fbf0f2;
-            border: 1px solid #f0d5da;
-            padding: 18px;
             border-radius: 10px;
-            font-size: 0.9em;
+            overflow: hidden;
         }
-        .stars { color: #f39c12; margin-bottom: 8px; font-size: 0.9em; }
-        .client-name { font-weight: 700; color: #6b1d2f; margin-top: 10px; font-size: 0.88em; }
-        .client-role { font-size: 0.78em; color: #777; }
+        .reviews-header-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+            background: #fbf0f2;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border: 1px solid #f0d5da;
+        }
+        .reviews-header-info .rating-score {
+            font-weight: 800;
+            color: #6b1d2f;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.05em;
+        }
+        .btn-write-review {
+            color: #6b1d2f;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85em;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #ffffff;
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 1px solid #f0d5da;
+            transition: all 0.2s ease;
+        }
+        .btn-write-review:hover {
+            background: #6b1d2f;
+            color: #ffffff;
+        }
 
         /* === CALL TO ACTION (CTA) BANNER === */
         .cta-banner {
@@ -911,41 +938,24 @@
 
         </div>
 
-        <!-- TESTIMONI PELANGGAN (REAL GOOGLE REVIEWS) -->
+        <!-- TESTIMONI PELANGGAN (INTEGRASI GOOGLE REVIEWS REAL-TIME) -->
         <div class="card" id="testimoni">
-            <h2><i class="fa-solid fa-comments"></i> Kata Pelanggan Tentang PSC Jatinangor</h2>
-            <p style="font-size: 0.9em; margin-bottom: 15px;">Ulasan asli dari Google Maps Review pelanggan kami:</p>
-
-            <div class="testimonial-grid">
-                <!-- Testimoni 1: Erika Putri -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p>"Puas dengan pelayanan service 2 laptop saya beres dan harganya sangat terjangkau menurutku..terima kasih"</p>
-                    <div class="client-name">Erika Putri</div>
-                    <div class="client-role"><i class="fa-brands fa-google"></i> Local Guide (69 reviews)</div>
+            <h2><i class="fa-solid fa-comments"></i> Ulasan Asli Pelanggan Google Maps</h2>
+            
+            <div class="reviews-header-info">
+                <div class="rating-score">
+                    <i class="fa-brands fa-google" style="color: #4285F4;"></i>
+                    <span>5.0 / 5.0 Rating Google</span>
                 </div>
+                <a href="https://www.google.com/maps/place/PSC+Service+Laptop+Macbook+Jatinangor/@-6.9427979,107.7745238,17z/data=!4m8!3m7!1s0x2e68c5386d99530f:0xb984eade85016a8b!8m2!3d-6.9427979!4d107.7745238!9m1!1b1!16s%2Fg%2F11nr6gg4zr" target="_blank" class="btn-write-review">
+                    <i class="fa-solid fa-pen"></i> Tulis Ulasan
+                </a>
+            </div>
 
-                <!-- Testimoni 2: Erlan Suherlan -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p>"Alhamdulillah akhirnya ada tempat servis Deket kosan jadi gak perlu jauh-jauh dan gak ribet lagi"</p>
-                    <div class="client-name">Erlan Suherlan</div>
-                    <div class="client-role"><i class="fa-brands fa-google"></i> Google Review</div>
-                </div>
-
-                <!-- Testimoni 3: Rehan Fadila -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p>"Servisnya memuaskan, prosesnya cepat, dan hasilnya bagus. Admin juga responsif dan ramah. Harga sesuai dengan kualitas. Pasti akan kembali lagi jika ada masalah pada laptop. Terima kasih, sukses selalu!!"</p>
-                    <div class="client-name">Rehan Fadila</div>
-                    <div class="client-role"><i class="fa-brands fa-google"></i> Google Review</div>
-                </div>
+            <!-- CONTAINER WIDGET GOOGLE REVIEWS -->
+            <div class="reviews-widget-container">
+                <!-- WIDGET EMBED TRUSTINDEX (GRATIS & DUKUNG GOOGLE REVIEWS) -->
+                <script defer src="https://cdn.trustindex.io/loader.js?b984eade85016a8b"></script>
             </div>
         </div>
 
